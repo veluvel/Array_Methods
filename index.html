@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Array Methods</h1>
+    <h2>Inspect & Check Console</h2>
+    <script>
+        // 1.tostring(),
+        const element = ['Fire', 'Air', 'Water',2,5];
+        console.log(element.toString());
+
+        // 2.join()
+        console.log(element.join(" / "));
+
+        //popping and pushing
+        // 3.pop()
+        console.log(element.pop());
+
+        // 4.push()
+        console.log(element.push("motor"))
+        
+        //shifting methods
+        // 5.shift()
+        console.log(element.shift());
+
+        // 6.unshift()
+        console.log(element.unshift("value1","value2"));
+
+        // 7. changing elements
+        const element2 = ['Fire', 'Air', 'Water'];
+        element2[0]="kiwi";
+        element2[1]="apple"
+        console.log(element2);
+
+        // 8.array length
+        const elements = ["value1","value2","value3"];
+        elements[elements.length] = "value4";
+        console.log(elements);
+
+        // 9.delete
+        const element3 = ["greet1","greeet2","greeet3"];
+        delete element3[0];
+        console.log(element3);
+
+        // Merging Arrays
+        // 10.concat()
+        const boy = ["vel","pravin","rupu"]
+        const girl = ["sam","jo","trish"]
+        const add = ["london","america","africa"]
+        console.log(boy.concat(girl));
+        console.log(boy.concat(girl,add));
+        console.log(boy.concat(girl,add,"vel","vel"))
+
+        //Splicing and slicing
+        // 11.splice()
+        const  alpha= ['a','b','c','d','e'];
+        alpha.splice(2,0,'p','q','r');
+        console.log(alpha) 
+
+        // 12.slice()
+        const letters = ['p','q','r','s','t'];
+        console.log(letters.slice(1,3));
+
+        // 13.reduce
+        const array = [1,2,3,4,6,7,8,9,10];
+        const val= array.reduce((acc,curr)=> acc+curr);
+        console.log(val);
+
+        // 14.sort
+        const arr1 = [1,54,87,64,2,4,6,8,79,165,64,84,21,"vel","murugan"];
+        const sortedarr = arr1.sort();
+        console.log(sortedarr);
+
+        const points = [40, 100, 1, 5, 25, 10];
+        points.sort(function(a, b){return a-b});
+        console.log(points);
+        points.sort(function(a,b){return b-a});
+        console.log(points);
+
+        // 15.foreach()
+        let sum = 0;
+        let arr3=[]
+        const numbers = [65, 44, 12, 4];
+        numbers.forEach(myFunction);
+        
+        function myFunction(item,index) {
+        sum += item;
+        arr3[index]=sum;
+    }
+        console.log(sum,arr3);
+
+        // 16.find()
+        var arr=[5,22,19,25,34];  
+        var result=arr.find(x=>x>20);  
+        console.log(result)  
+
+
+        // 1.pop()- array.pop() - remove value last - change array - return
+        // 2.push()- array.push() - add value in last - length- return new length
+        // 3.shift() - array.shift() - remove first item - change original- array - return shift element 
+        // 4.unshift() - array.unshift() - add new element in beginning - overwrites the original array
+        // 5.splice() - array.splice(index, howmany, item1) - add and/or removearray elements - overwrites the original aray
+        // 6.reduce() - array.reduce(function(,)) - 
+        // 7.sort() - array.sort()
+        // 8.foreach() -
+        // 9.find() -
+        // 10.join() -
+    </script>
+</body>
+</html>
