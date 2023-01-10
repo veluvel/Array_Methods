@@ -11,7 +11,7 @@
     <h1>Array Methods</h1>
     <h2>Inspect & Check Console</h2>
     <script>
-        // 1.tostring()***
+        // 1.tostring()
         const element = ['Fire', 'Air', 'Water',2,5];
         console.log(element.toString());
 
@@ -35,7 +35,7 @@
         // 7. changing elements
         const element2 = ['Fire', 'Air', 'Water'];
         element2[0]="kiwi";
-        element2[1]="apple"
+        element2[1]="apple";
         console.log(element2);
 
         // 8.array length
@@ -109,7 +109,7 @@
         
         // 18.fill()
         const fruits = ["Banana", "Orange", "Apple", "Mango","pineapple"];
-        fruits.fill("fill");
+        fruits.fill("fill",1,2);
         console.log(fruits);
 
         // 19.indexof()
@@ -136,8 +136,60 @@
         const som = [1,3,5,7,9,11]
         console.log(som.some(isEven)) // return boolean 
 
-        // 1.pop()- array.pop() - remove value last - change array - return
-        // 2.push()- array.push() - add value in last - length- return new length
+        // 23.copyWithin()
+        let words=["one","two","three","four","five"]
+        console.log(words.copyWithin(2,0,2)); //target,start,end
+
+        // 24.entries()
+        const fruis = ["Banana", "Orange", "Apple", "Mango"];
+        const f = fruis.entries();
+
+        for (let x of f) {
+            console.log( x );
+        }
+
+        // 25.lastIndexOf()
+        const alphabets = ["A","B","C","D","A","E"];
+        console.log(alphabets.lastIndexOf("A"));
+         
+        // 26.flat()
+        let num = [1, 2, [3, 4, [5, 6, [7, 8]]]];
+        let flattenArray = num.flat(2); //arr.flat(depth)
+        console.log(flattenArray);
+         
+        // 27.values()
+        let languages = ["JavaScript", "Java", "C++"];
+        let iteratorObject = languages.values();
+        for (let value of iteratorObject) {
+            console.log(value);
+        }
+
+        // 28.reduceRight()
+        const red = [175, 50, 25];
+        const reduceri = red.reduceRight(myFunc);
+        console.log(reduceri);
+
+        function myFunc(total, num) {
+        return total + num;
+        }
+
+        // 29.from()
+        let text = "ABCDEFG"
+        console.log(Array.from(text));
+
+        // 30.includes()
+        const fruit = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(fruit.includes("Banana", 0));
+
+        // isArray()
+        console.log(Array.isArray(fruits));
+
+        let myName = "Velmurugan";
+        console.log(Array.isArray(myName));
+
+
+        // 1.pop() - array.pop() - remove value last - change array - return
+        // 2.push() - array.push() - add value in last - length- return new length
         // 3.shift() - array.shift() - remove first item - change original- array - return shift element 
         // 4.unshift() - array.unshift() - add new element in beginning - overwrites the original array
         // 5.splice() - array.splice(index, howmany, item1) - add and/or removearray elements - overwrites the original aray
@@ -147,7 +199,7 @@
         // 9.find() -
         // 10.join() -
         // 11.concat() -
-        // 12.every() - doesn't change original array &&
+        // 12.every() - doesn't change original array  -- &&
         // 13.fill()
         // 14.indexOf() - matches the first matched element
         // 15.map() - return new arrray - doesn't change original array  
@@ -155,11 +207,19 @@
         // 17.some() - ||
         // 18.slice() - 
         // 19.toString() - 
-        // 20.concat()
-        // 21.delete()
-        // 22.array length
-        // 23.changing elements
-
+        // 20.concat() -
+        // 21.delete() -
+        // 22.array length -
+        // 23.changing elements -
+        // 24.copyWithin() - from one position to another position 
+        // 25.entries() - index values
+        // 26.lastIndexOf() - returns the lsrt index position
+        // 27.flat() -
+        // 28.values() - 
+        // 29.reduceRight() - array.reduceRight(function(total, currentValue, currentIndex, arr), initialValue)
+        // 30.from() - method returns an array from any iterable object.
+        // 31.includes() - array.includes(element, start) - returns true or false
+        // 32.isArray() - Array.isArray(obj) - A boolean  true if the object is an array, otherwise false.
     </script>
 </body>
 </html>
